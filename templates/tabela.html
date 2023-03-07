@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabela</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>GERADOR DE TABELA-VERDADE DE EXPRESSÕES BOOLEANAS</h1>
+    {% if numero == 3  %}
+    <table>
+        <thead>
+            <tr>
+                <th>{{letras[0]}}</th>
+                <th>{{letras[1]}}</th>
+                <th>{{letras[2]}}</th>
+                <th>S</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    {% if numero == 2 %}
+    <table>
+        <thead>
+            <tr>
+                <th>{{letras[0]}}</th>
+                <th>{{letras[1]}}</th>
+                <th>S</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    {% if numero == 4 %}
+    <table>
+        <thead>
+            <tr>
+                <th>{{letras[0]}}</th>
+                <th>{{letras[1]}}</th>
+                <th>{{letras[2]}}</th>
+                <th>{{letras[3]}}</th>
+                <th>S</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+<h3>Software desenvolvido por Isaac Martins</h3>
+</body>
+</html>
